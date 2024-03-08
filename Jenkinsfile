@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-              checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'hushmeh', url: 'https://github.com/husmeh/calculator']])
+              cleanWs()
+              checkout scm
               sh "pip install python3.10"
                 //git 'https://github.com/husmeh/calculator'
             }
