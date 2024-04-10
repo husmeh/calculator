@@ -4,10 +4,9 @@ pipeline {
         stage('Build') {
             steps {
               echo "Hello pipeline"
-              //cleanWs()
-              //checkout scm
-              //sh "pip install python3.10"
-                //git 'https://github.com/husmeh/calculator'
+              cleanWs()
+              checkout scm
+              sh "pip install python3.10"
             }
         }
         stage('Test') {
