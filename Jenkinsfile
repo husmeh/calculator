@@ -9,12 +9,14 @@ pipeline {
               sh "python3 -m venv ."
               sh "python3 --version"
               sh "pip3 install pytest"
+              sh "pytest --version"
 
             }
         }
         stage('Test') {
             steps {
                 echo "Hello Test"
+                sh "pytest --version"
                 sh "pytest test/test_calculator.py"
 
             }
