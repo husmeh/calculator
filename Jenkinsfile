@@ -6,9 +6,10 @@ pipeline {
               echo "Hello pipeline"
               cleanWs()
               checkout scm
+              sh "python -m venv"
               sh "python3 --version"
-              sh "apt install python3-pip"
-              sh "apt-get install python3-pytest"
+              sh "pip install pytest"
+
             }
         }
         stage('Test') {
