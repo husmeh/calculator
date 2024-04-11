@@ -8,7 +8,7 @@ pipeline {
               checkout scm
               sh "python3 -m venv ."
               sh "python3 --version"
-              sh "pip install pytest"
+              sh "pip3 install pytest"
 
             }
         }
