@@ -6,7 +6,7 @@ pipeline {
               echo "Hello pipeline"
               cleanWs()
               checkout scm
-              sh "python -m venv"
+              sh "python3 -m venv"
               sh "python3 --version"
               sh "pip install pytest"
 
