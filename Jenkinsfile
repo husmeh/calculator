@@ -7,6 +7,8 @@ pipeline {
               cleanWs()
               checkout scm
               sh "python3 --version"
+              sh "apt install python3-pip"
+              sh "apt-get install python3-pytest"
             }
         }
         stage('Test') {
