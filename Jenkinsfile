@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo "Hello Test"
                 // sh "pytest --version"   
-                sh "python3 -m pytest test/test_calculator.py"
+                sh "python3 -m pytest test/test_calculator.py -v"
 
             }
         }
