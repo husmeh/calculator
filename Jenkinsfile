@@ -10,15 +10,15 @@ pipeline {
               sh "python3 --version"
               sh "python3 -m pip install --upgrade pip"
               sh "pip3 install -U pytest"
-              sh "pytest --version"
+              // sh "pytest --version"
 
             }
         }
         stage('Test') {
             steps {
                 echo "Hello Test"
-                sh "pytest --version"   
-                sh "pytest test/test_calculator.py"
+                // sh "pytest --version"   
+                sh "python3 -m pytest test/test_calculator.py"
 
             }
         }
