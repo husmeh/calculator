@@ -8,6 +8,7 @@ pipeline {
               checkout scm
               sh "python3 -m venv ."
               sh "python3 --version"
+              sh "python3 -m pip install --upgrade pip"
               sh "pip3 install pytest"
               sh "pytest --version"
 
@@ -16,7 +17,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo "Hello Test"
-                sh "pytest --version"
+                sh "pytest --version"   
                 sh "pytest test/test_calculator.py"
 
             }
